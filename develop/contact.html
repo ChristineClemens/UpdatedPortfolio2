@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <title>Portfolio | Christine Clemens</title>
+    </head>
+
+    <!-- Navigation Bar -->
+    <header class="navbar navbar-dark bg-dark permanentMarkerFont">
+        <a class="navbar-brand" href="index.html">
+        <!--Logo and Name-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Circle-icons-dev.svg/1200px-Circle-icons-dev.svg.png" 
+            width="30" 
+            height="30" 
+            class="d-inline-block align-top" 
+            alt="CC Logo" 
+            loading="lazy">
+            Christine Clemens
+        </a>
+        <!--Navigable Page Links-->
+        <nav>
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a class="nav-link tealText" href="index.html">About<span class="sr-only">(current)</span></a>
+                </li>
+                <hr />
+                <li class="nav-item active">
+                    <a class="nav-link tealText" href="portfolio.html">Portfolio</a>
+                </li>
+                <hr />
+                <li class="nav-item active">
+                    <a class="nav-link tealText" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <body class="container-sm">
+        <section class="my-5">
+            <!-- "Contact" Heading Element-->
+            <h1 class="h1-responsive font-weight-bold text-center my-5 permanentMarkerFont tealText" data-aos="fade-up" data-aos-duration="2000">Contact Me</h1>
+            <!-- Section Description -->
+            <p class="text-center w-responsive mx-auto pb-5 caveatFont" style="font-size: 20px; text-indent: 50px;">
+                As an enthusiastic young professional who is deeply invested in developing professionally and 
+                rising to the challenge of new learning opportunities, I welcome any opportunity to collaborate 
+                and exercise my skills. In employing my abilities as a creative, versatile, and ardent 
+                developer, I am confident that I can serve as a beneficial addition to your staff if provided 
+                the opportunity.
+                <br>
+                If you'd like to get in touch to discuss collaboration, employement, or your own inquiry, please 
+                feel free to contact me below as I'd love to hear from you!
+            </p>
+        
+            <!-- Contact Form with Header -->
+            <main class="row">       
+                <div class="col-lg-5 mb-lg-0 mb-4">
+                    <figure class="card">
+                        <article class="card-body">
+                            <figcaption class="form-header blue accent-1">
+                                <h3 class="mt-2 permanentMarkerFont tealText"><i class="fas fa-envelope"></i>Get in touch:</h3>
+                            </figcaption>
+                            <p class="dark-grey-text caveatFont">I'll get back to you as soon as I can!</p>
+                            
+                            <!-- Contact Form Body -->
+                            <!--Name Field-->
+                            <section class="md-form">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="form-name" class="form-control" placeholder="First name Last name...">
+                                <label for="form-name">Your name</label>
+                            </section>
+                            <!--Email Field-->
+                            <section class="md-form">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <input type="text" id="form-email" class="form-control" placeholder="MyEmail@gmail.com...">
+                                <label for="form-email">Your email</label>
+                            </section>
+                            <!--Subject Line Field-->
+                            <section class="md-form">
+                                <i class="fas fa-tag prefix grey-text"></i>
+                                <input type="text" id="form-Subject" class="form-control" placeholder="Ex. Collaboration Inquiry...">
+                                <label for="form-Subject">Subject</label>
+                            </section>
+                            <!--Message Field-->
+                            <section class="md-form">
+                                <i class="fas fa-pencil-alt prefix grey-text"></i>
+                                <textarea id="form-text" class="form-control md-textarea" placeholder="Your detailed message..." rows="4"></textarea>
+                                <label for="form-text">Send message</label>
+                            </section>
+                            <!--"Submit" Button-->
+                            <section class="text-center">
+                                <a href="" class="btn btn-primary permanentMarkerFont a:hover" 
+                                    style="padding: 0 20px 0 20px; font-size: 25px; background-color: lightGray; border: 1px solid lightGray;">
+                                    Submit
+                                </a>
+                            </section>
+                        </article>
+                    </div>
+                </figure>
+
+                <aside class="col-lg-7">
+                    <!--Google Map Element-->
+                    <figure id="map-container-section" class="z-depth-1-half map-container-section mb-4" style="height: 400px">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.2517907885003!2d-79.40309013383315!3d43.68452850842131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b335de13bd52d%3A0x3e1118e8139c8004!2sToronto%2C%20ON%20M4V%201J7!5e0!3m2!1sen!2sca!4v1590015819387!5m2!1sen!2sca"
+                            style="border:0" allowfullscreen>
+                        </iframe>
+                    </figure>
+
+                    <!-- Contact Information -->
+                    <article class="row text-center caveatFont"  style="border: 1px solid lightgray; border-radius: 3px; padding-top: 6px;">
+                        <!--Location-->
+                        <section class="col-md-4" style="border-right: 1px solid lightgray">
+                            <a class="btn-floating blue accent-1">
+                            <i class="fas fa-map-marker-alt"></i>
+                            </a>
+                            <div data-aos-delay="1500" data-aos-duration="600" data-aos="flip-left">
+                                <img src="../assets/MapIcon.PNG" style="height:50px" alt="MapIcon"></img>
+                                <p>Toronto, Canada</p>
+                            </div>
+                        </section>
+                        <!--Phone Number and Contact Hours-->
+                        <section class="col-md-4" style="border-right: 1px solid lightgray">
+                            <a class="btn-floating blue accent-1">
+                            <i class="fas fa-phone"></i>
+                            </a>
+                            <div data-aos-delay="1500" data-aos-duration="600" data-aos="flip-left">
+                                <img src="../assets/PhoneIcon.PNG" style="height:50px" alt="PhoneIcon"></img>
+                                <p>+1-(416)-828-7698</p>
+                            </div>
+                        </section>
+                        <!--Name and Email-->
+                        <section class="col-md-4">
+                            <a class="btn-floating blue accent-1">
+                            <i class="fas fa-envelope"></i>
+                            </a>
+                            <div data-aos-delay="1500" data-aos-duration="600" data-aos="flip-left">
+                                <img src="../assets/EmailIcon.PNG" style="height:50px" alt="EmailIcon"></img>
+                                <p>christineclemens.tesol@gmail.com</p>
+                            </div>
+                        </section>
+                    </article>
+                </aside>
+            </main>
+        </section>
+
+        <!--Fixed Footer-->
+        <footer>
+            <div class="alert alert-dark" role="alert">
+                Christine Clemens (c) 2020 SCS Bootcamp
+            </div>
+        </footer>        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>        
+    </body>
+</html>
