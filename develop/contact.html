@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../assets/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="script" href="../develop/script.js">
 
         <title>Portfolio | Christine Clemens</title>
     </head>
@@ -84,7 +85,7 @@
                             <!--Subject Line Field-->
                             <section class="md-form">
                                 <i class="fas fa-tag prefix grey-text"></i>
-                                <input type="text" id="form-Subject" class="form-control" placeholder="Ex. Collaboration Inquiry...">
+                                <input type="text" id="form-subject" class="form-control" placeholder="Ex. Collaboration Inquiry...">
                                 <label for="form-Subject">Subject</label>
                             </section>
                             <!--Message Field-->
@@ -94,12 +95,7 @@
                                 <label for="form-text">Send message</label>
                             </section>
                             <!--"Submit" Button-->
-                            <section class="text-center">
-                                <a href="" class="btn btn-primary permanentMarkerFont a:hover" 
-                                    style="padding: 0 20px 0 20px; font-size: 25px; background-color: lightGray; border: 1px solid lightGray;">
-                                    Submit
-                                </a>
-                            </section>
+                            <section id="submitBtnDiv" class="text-center"></section>
                         </article>
                     </div>
                 </figure>
@@ -156,7 +152,30 @@
             </div>
         </footer>        
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
+        <script>    
+            function gatherInput() {
+                var senderName = document.querySelector("#form-name").value;
+                var senderEmail = document.querySelector("#form-email").value;
+                var subjectLine = document.querySelector("#form-subject").value.split(" ").join("%20");
+                var messageBody = document.querySelector("#form-text").value;
+                var fullEmail = `${messageBody}                                                                                                  
+                 \r\n \r\n ${senderName} \r\n                                                                                                                                  
+                 ${senderEmail}`;                                                       
+                var mailTo = `mailto:christineclemens.tesol@gmail.com?subject=${subjectLine}&body=${fullEmail}`;
+                return mailTo;
+            };
+
+            document.querySelector("#form-text").addEventListener("input", renderBtn);
+
+            function renderBtn() {
+                var mailTo = gatherInput();
+                document.querySelector("#submitBtnDiv").innerHTML = 
+                    `<a href="${mailTo}" id="submitBtn" class="btn btn-primary permanentMarkerFont a:hover" 
+                        style="padding: 0 20px 0 20px; font-size: 25px; background-color: lightGray; border: 1px solid lightGray;">
+                        Submit
+                    </a>`;
+            };
+
             AOS.init();
         </script>        
     </body>
