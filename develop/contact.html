@@ -159,8 +159,8 @@
                 var subjectLine = document.querySelector("#form-subject").value.split(" ").join("%20");
                 var messageBody = document.querySelector("#form-text").value;
                 var fullEmail = `${messageBody}                                                                                                  
-                 \r\n \r\n ${senderName} \r\n                                                                                                                                  
-                 ${senderEmail}`;                                                       
+                 \r\n \r\n ${senderName} \r\n                                                                                                                                                                                                                             
+                 ${senderEmail}`;                                                                                                                                     
                 var mailTo = `mailto:christineclemens.tesol@gmail.com?subject=${subjectLine}&body=${fullEmail}`;
                 return mailTo;
             };
